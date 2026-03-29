@@ -40,7 +40,7 @@ export function RecentActivity() {
   return (
     <div className="glass-card overflow-hidden">
       <div className="p-6 border-b border-white/5 flex justify-between items-center bg-white/[0.02]">
-        <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-white/60 flex items-center gap-2">
+        <h3 className="text-lg font-serif italic text-white/80 flex items-center gap-2">
           <div className="w-1 h-3 bg-primary"></div>
           Institutional Activity Ledger
         </h3>

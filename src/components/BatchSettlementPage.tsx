@@ -36,7 +36,7 @@ export function BatchSettlementPage() {
               <div className="w-2 h-0.5 bg-secondary"></div>
               <span className="text-[10px] font-black text-secondary uppercase tracking-[0.3em]">Atomic Rails</span>
             </div>
-            <h1 className="text-4xl font-black tracking-tighter text-white uppercase leading-none">Batch Settlement</h1>
+            <h1 className="text-5xl font-serif italic tracking-tight text-white leading-none">Batch Settlement</h1>
             <p className="text-white/40 text-sm font-medium tracking-wide max-w-xl">
               Monitor and execute high-throughput liquidity flows across regional corridors via Solana Atomic Settlement.
             </p>

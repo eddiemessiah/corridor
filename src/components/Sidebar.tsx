@@ -35,8 +35,8 @@ export function Sidebar({ currentPage, onNavigate }: SidebarProps) {
             <Landmark className="text-white w-6 h-6" />
           </div>
           <div>
-            <h1 className="text-sm font-black text-white uppercase tracking-tighter leading-none">AMINA</h1>
-            <p className="text-[9px] font-bold text-primary uppercase tracking-[0.2em] mt-1">Institutional</p>
+            <h1 className="text-xl font-serif italic text-white leading-none">AMINA</h1>
+            <p className="text-[9px] font-black text-primary uppercase tracking-[0.3em] font-sans mt-1.5">Institutional</p>
           </div>
         </div>
       </div>

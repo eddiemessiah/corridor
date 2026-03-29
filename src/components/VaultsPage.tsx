@@ -67,9 +67,9 @@ export function VaultsPage() {
         <div className="space-y-3">
           <div className="flex items-center gap-3">
             <div className="w-2 h-0.5 bg-primary"></div>
-            <span className="text-[10px] font-black text-primary uppercase tracking-[0.3em]">Treasury Ops</span>
+            <span className="text-[10px] font-black text-primary uppercase tracking-[0.4em] font-sans">Treasury Ops</span>
           </div>
-          <h2 className="text-4xl font-black tracking-tighter text-white uppercase leading-none">Corridor Vaults</h2>
+          <h2 className="text-5xl font-serif tracking-tight text-white italic leading-none">Corridor Vaults</h2>
           <p className="text-white/40 text-sm font-medium tracking-wide max-w-xl">
             Multi-signature liquidity management for institutional cross-border settlement corridors via Solana Escrow.
           </p>
@@ -92,8 +92,8 @@ export function VaultsPage() {
             
             <div className="flex justify-between items-start mb-8">
               <div>
-                <span className="text-[9px] text-white/20 uppercase tracking-[0.2em] font-black">Corridor ID: {vault.id}</span>
-                <h3 className="text-xl font-black mt-2 uppercase tracking-tighter text-white group-hover:text-primary transition-colors">{vault.name}</h3>
+                <span className="text-[9px] text-white/20 uppercase tracking-[0.3em] font-sans font-black">Corridor ID: {vault.id}</span>
+                <h3 className="text-2xl font-serif mt-2 italic text-white group-hover:text-primary transition-colors">{vault.name}</h3>
               </div>
               <div className={`${vault.statusStyle} px-2.5 py-1 text-[9px] font-black uppercase border rounded-sm tracking-widest`}>
                 {vault.status}
@@ -103,10 +103,10 @@ export function VaultsPage() {
             <div className="space-y-8">
               <div className="flex justify-between items-end">
                 <div>
-                  <p className="text-[9px] text-white/30 uppercase font-black tracking-[0.15em] mb-2">Live Liquidity</p>
+                  <p className="text-[9px] text-white/20 uppercase font-sans font-black tracking-[0.2em] mb-2">Live Liquidity</p>
                   <div className="flex items-baseline gap-2">
-                    <span className="text-4xl font-black tabular-nums text-white tracking-tighter">{vault.balance}</span>
-                    <span className="text-sm font-black text-primary uppercase">{vault.currency}</span>
+                    <span className="text-5xl font-serif tabular-nums text-white tracking-tight">{vault.balance}</span>
+                    <span className="text-xs font-black text-primary uppercase font-sans">{vault.currency}</span>
                   </div>
                   <p className="text-[10px] text-white/10 tabular-nums mt-1 italic font-medium">≈ ${vault.usdValue} USDG Internal</p>
                 </div>

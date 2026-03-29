@@ -25,9 +25,9 @@ export function CompliancePage() {
         <div className="space-y-3">
           <div className="flex items-center gap-3">
             <div className="w-2 h-0.5 bg-primary"></div>
-            <span className="text-[10px] font-black text-primary uppercase tracking-[0.3em]">Governance Module</span>
+            <span className="text-[10px] font-black text-primary uppercase tracking-[0.4em] font-sans">Governance Module</span>
           </div>
-          <h1 className="text-4xl font-black tracking-tighter text-white uppercase leading-none">Compliance & Audit Hub</h1>
+          <h1 className="text-5xl font-serif tracking-tight text-white italic leading-none">Compliance & Audit Hub</h1>
           <p className="text-sm text-white/40 font-medium tracking-wide">Institutional-grade AML/KYC monitoring and IVMS101 regulatory rail enforcement.</p>
         </div>
         <div className="flex gap-3">
@@ -145,8 +145,8 @@ export function CompliancePage() {
               ].map((sar) => (
                 <div key={sar.id} className="p-4 bg-white/[0.02] border border-white/5 hover:border-primary/40 cursor-pointer transition-all group">
                   <div className="flex justify-between mb-2">
-                    <span className="text-[11px] font-black text-white group-hover:text-primary transition-colors tracking-tight">{sar.id}</span>
-                    <span className="text-[9px] font-black text-white/20 uppercase tracking-widest">{sar.time}</span>
+                    <span className="text-lg font-serif italic text-white group-hover:text-primary transition-colors tracking-tight">{sar.id}</span>
+                    <span className="text-[9px] font-black text-white/20 uppercase tracking-[0.3em] font-sans">{sar.time}</span>
                   </div>
                   <p className="text-[11px] text-white/40 font-medium leading-relaxed italic line-clamp-2">"{sar.desc}"</p>
                   <div className="mt-4 flex gap-3">

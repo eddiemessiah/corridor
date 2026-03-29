@@ -9,7 +9,7 @@ export function Header({ onNewTransfer }: HeaderProps) {
   return (
     <header className="sticky top-0 z-40 bg-surface/80 backdrop-blur-md border-b border-white/5 flex justify-between items-center w-full px-8 py-4">
       <div className="flex items-center gap-10">
-        <div className="text-2xl font-black tracking-tighter uppercase font-display italic">
+        <div className="text-3xl font-serif tracking-tighter uppercase italic">
           <span className="text-white">Corridor</span>
           <span className="text-gradient">OS</span>
         </div>

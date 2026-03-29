@@ -61,7 +61,7 @@ export function TransferPage({ onBack }: TransferPageProps) {
             <div className="w-24 h-24 bg-secondary/20 rounded-full flex items-center justify-center mb-8 solana-glow border border-secondary/50">
               <Check className="w-12 h-12 text-secondary" />
             </div>
-            <h1 className="text-4xl font-black text-white uppercase tracking-tighter mb-4">Settlement Finalized</h1>
+            <h1 className="text-5xl font-serif italic text-white tracking-tight mb-4">Settlement Finalized</h1>
             <p className="text-white/40 max-w-md mb-10 text-sm font-medium tracking-wide">
               Corridor NG-USDC → KE-USDC has been successfully settled on Solana Mainnet-Beta.
             </p>
@@ -123,7 +123,7 @@ export function TransferPage({ onBack }: TransferPageProps) {
                     <div className="w-2 h-0.5 bg-primary"></div>
                     <span className="text-[10px] font-black text-primary uppercase tracking-[0.3em]">Execution Module</span>
                   </div>
-                  <h1 className="text-4xl font-black uppercase tracking-tighter text-white leading-none mb-3">Capital Settlement</h1>
+                  <h1 className="text-5xl font-serif italic tracking-tight text-white leading-none mb-3">Capital Settlement</h1>
                   <p className="text-white/40 text-sm font-medium">Cross-border liquidity relocation via on-chain corridor rails.</p>
                 </header>
 

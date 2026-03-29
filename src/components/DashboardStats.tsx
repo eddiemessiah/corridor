@@ -14,31 +14,31 @@ export function DashboardStats() {
             <div className="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></div>
           </div>
           <div className="flex items-baseline gap-6 mt-1">
-            <h2 className="text-6xl font-black tracking-tighter tabular-nums text-white">
-              $12,482,904<span className="text-white/30">.52</span>
+            <h2 className="text-7xl font-serif tracking-tight tabular-nums text-white">
+              $12,482,904<span className="text-white/20">.52</span>
             </h2>
-            <div className="flex items-center gap-1 bg-secondary/10 px-2 py-1 rounded-sm border border-secondary/20">
-              <TrendingUp className="w-3 h-3 text-secondary" />
-              <span className="text-secondary font-bold text-[10px] tracking-widest">+0.12%</span>
+            <div className="flex items-center gap-1.5 bg-secondary/10 px-3 py-1.5 border border-secondary/20">
+              <TrendingUp className="w-3.5 h-3.5 text-secondary" />
+              <span className="text-secondary font-black text-[10px] tracking-widest uppercase">+0.12%</span>
             </div>
           </div>
         </div>
         
         <div className="grid grid-cols-3 gap-12 mt-10">
-          <div className="space-y-1">
-            <p className="text-[9px] font-black text-white/30 uppercase tracking-[0.2em]">USDC Liquidity</p>
-            <p className="text-2xl font-bold tabular-nums text-white">$8,120,440</p>
-            <div className="h-0.5 w-8 bg-primary"></div>
+          <div className="space-y-2">
+            <p className="text-[9px] font-black text-white/20 uppercase tracking-[0.3em]">USDC Liquidity</p>
+            <p className="text-3xl font-serif tabular-nums text-white tracking-tight">$8,120,440</p>
+            <div className="h-0.5 w-10 bg-primary/40"></div>
           </div>
-          <div className="space-y-1">
-            <p className="text-[9px] font-black text-white/30 uppercase tracking-[0.2em]">USDG (Global)</p>
-            <p className="text-2xl font-bold tabular-nums text-white">$4,362,464</p>
-            <div className="h-0.5 w-8 bg-white/20"></div>
+          <div className="space-y-2">
+            <p className="text-[9px] font-black text-white/20 uppercase tracking-[0.3em]">USDG (Global)</p>
+            <p className="text-3xl font-serif tabular-nums text-white tracking-tight">$4,362,464</p>
+            <div className="h-0.5 w-10 bg-white/10"></div>
           </div>
-          <div className="space-y-1">
-            <p className="text-[9px] font-black text-white/30 uppercase tracking-[0.2em]">In-Transit</p>
-            <p className="text-2xl font-bold tabular-nums text-secondary">$241,000</p>
-            <div className="h-0.5 w-8 bg-secondary/50"></div>
+          <div className="space-y-2">
+            <p className="text-[9px] font-black text-white/20 uppercase tracking-[0.3em]">In-Transit</p>
+            <p className="text-3xl font-serif tabular-nums text-secondary tracking-tight">$241,000</p>
+            <div className="h-0.5 w-10 bg-secondary/30"></div>
           </div>
         </div>
       </div>
