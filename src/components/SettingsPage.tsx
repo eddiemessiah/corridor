@@ -9,265 +9,301 @@ import {
   Settings as SettingsIcon,
   Bell,
   HelpCircle,
-  Plus
+  Plus,
+  Globe,
+  Key,
+  Database,
+  Search,
+  Zap,
+  ChevronRight
 } from 'lucide-react';
 import { motion } from 'motion/react';
 
 export function SettingsPage() {
   return (
-    <div className="max-w-7xl mx-auto">
+    <div className="flex flex-col h-full space-y-12 pb-20 max-w-7xl mx-auto">
+      {/* Page Header */}
+      <section className="mt-6 mb-12">
+        <div className="flex items-center gap-3 mb-3">
+          <div className="w-2 h-0.5 bg-primary"></div>
+          <span className="text-[10px] font-black text-primary uppercase tracking-[0.3em]">System Config</span>
+        </div>
+        <h1 className="text-4xl font-black tracking-tighter text-white uppercase leading-none">Settings & Governance</h1>
+        <p className="text-white/40 text-sm font-medium tracking-wide max-w-xl mt-3">
+          Configure institutional identity, security parameters, and regional compliance rails for CorridorOS.
+        </p>
+      </section>
+
       {/* Section: Profile */}
-      <section className="mb-12">
-        <div className="flex items-baseline justify-between mb-6">
-          <div>
-            <h3 className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-1">Section 01</h3>
-            <h2 className="text-2xl font-black tracking-tight uppercase">Institutional Profile</h2>
+      <section className="space-y-8">
+        <div className="flex items-end justify-between border-b border-white/5 pb-6">
+          <div className="space-y-1">
+            <span className="text-[9px] font-black uppercase tracking-[0.2em] text-primary">Identity Engine</span>
+            <h2 className="text-2xl font-black tracking-tighter uppercase text-white">Institutional Profile</h2>
           </div>
-          <button className="text-xs font-bold border border-black px-4 py-2 hover:bg-black hover:text-white transition-colors uppercase tracking-widest">Edit Details</button>
+          <button className="glass-card bg-white/[0.02] border-white/10 text-white/40 px-6 py-2.5 text-[9px] font-black uppercase tracking-widest hover:text-white transition-all">
+            Update Entity
+          </button>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-1">
-          <div className="bg-white p-6 border border-slate-100 shadow-sm">
-            <label className="text-[10px] font-bold text-slate-500 uppercase tracking-widest block mb-2">Legal Entity Name</label>
-            <p className="text-lg font-semibold">AMINA Bank AG</p>
-            <p className="text-xs text-slate-400 mt-1">CHE-123.456.789 HR/MWST</p>
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="glass-card p-8 border-white/5 bg-white/[0.01]">
+            <label className="text-[9px] font-black text-white/20 uppercase tracking-[0.2em] block mb-3">Legal Entity Name</label>
+            <p className="text-xl font-black text-white tracking-tight uppercase">AMINA Bank AG</p>
+            <p className="text-[10px] text-white/30 mt-2 font-mono tabular-nums">CHE-123.456.789 HR/MWST</p>
           </div>
-          <div className="bg-white p-6 border border-slate-100 shadow-sm">
-            <label className="text-[10px] font-bold text-slate-500 uppercase tracking-widest block mb-2">Registration Jurisdiction</label>
-            <p className="text-lg font-semibold">Switzerland (FINMA)</p>
-            <p className="text-xs text-slate-400 mt-1">ZUG Business Registry</p>
+          <div className="glass-card p-8 border-white/5 bg-white/[0.01]">
+            <label className="text-[9px] font-black text-white/20 uppercase tracking-[0.2em] block mb-3">Registration Jurisdiction</label>
+            <p className="text-xl font-black text-white tracking-tight uppercase">Switzerland (FINMA)</p>
+            <p className="text-[10px] text-white/30 mt-2 font-mono tabular-nums">ZUG Business Registry</p>
           </div>
-          <div className="bg-white p-6 border border-slate-100 shadow-sm">
-            <label className="text-[10px] font-bold text-slate-500 uppercase tracking-widest block mb-2">Primary Contact</label>
-            <p className="text-lg font-semibold">Compliance Desk</p>
-            <p className="text-xs text-slate-400 mt-1">ops@amina-bank.ch</p>
+          <div className="glass-card p-8 border-white/5 bg-white/[0.01]">
+            <label className="text-[9px] font-black text-white/20 uppercase tracking-[0.2em] block mb-3">Primary Contact</label>
+            <p className="text-xl font-black text-white tracking-tight uppercase">Compliance Desk</p>
+            <p className="text-[10px] text-white/30 mt-2 font-mono tabular-nums underline decoration-primary/30">ops@amina-bank.ch</p>
           </div>
         </div>
-        <div className="mt-8 bg-slate-50 p-8 border border-slate-100">
-          <h4 className="text-xs font-bold uppercase tracking-widest mb-6">Branding & Terminal Identity</h4>
-          <div className="flex items-center gap-12">
-            <div className="w-32 h-32 bg-white flex items-center justify-center border border-slate-200">
+
+        <div className="glass-card p-8 border-white/5 bg-primary/5 relative overflow-hidden group">
+          <div className="absolute top-0 right-0 -m-8 w-48 h-48 bg-primary/10 blur-[60px]"></div>
+          <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-white/30 mb-8">Branding & Terminal Identity</h4>
+          <div className="flex flex-col md:flex-row items-center gap-12 relative">
+            <div className="w-40 h-40 glass-card bg-white/[0.03] flex items-center justify-center border-white/10 group-hover:border-primary/40 transition-all shadow-2xl">
               <img 
                 alt="Brand Logo" 
-                className="w-20 h-20 grayscale" 
+                className="w-24 h-24 invert opacity-80" 
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuBh14eulQuQMrHo-FfYKodzTtc116LYD_ocskFc4GxmMF96kcuhJQKLW7PtnKnpOo7nR-FZEsoQk5wD9SUKbuNBUZN77Uac9qPktws0NR_Xboa8xzCtwbFRtptCW6HnqYMShi-jX_PfJRcc8PxEhwfezx-JQFkTJO9yexAZFyFysivW2RQlO-TNfVdhGNg7dDYVLLUoUS--ijU_OVVDFbOYHSwKiBHi8SpdzxC47nXrd8PlMbsh4iCQDYiAs6buKzG84Wwp911X4uM"
                 referrerPolicy="no-referrer"
               />
             </div>
-            <div className="flex-1 space-y-4">
+            <div className="flex-1 space-y-8">
               <div>
-                <label className="text-[10px] font-bold text-slate-500 uppercase tracking-widest block mb-2">Interface Accent Color</label>
-                <div className="flex gap-2">
-                  <div className="w-8 h-8 bg-black ring-2 ring-offset-2 ring-black cursor-pointer"></div>
-                  <div className="w-8 h-8 bg-blue-600 cursor-pointer"></div>
-                  <div className="w-8 h-8 bg-emerald-400 cursor-pointer"></div>
-                  <div className="w-8 h-8 bg-slate-400 cursor-pointer"></div>
+                <label className="text-[10px] font-black text-white/20 uppercase tracking-[0.2em] block mb-4">Interface Accent Color</label>
+                <div className="flex gap-4">
+                  {[
+                    { color: 'bg-primary', active: true },
+                    { color: 'bg-secondary', active: false },
+                    { color: 'bg-white', active: false },
+                    { color: 'bg-error', active: false }
+                  ].map((item, i) => (
+                    <div key={i} className={`w-10 h-10 ${item.color} ${item.active ? 'ring-2 ring-offset-4 ring-offset-surface ring-primary' : 'opacity-40'} cursor-pointer hover:scale-110 transition-all shadow-lg`}></div>
+                  ))}
                 </div>
               </div>
-              <div className="pt-4">
-                <p className="text-xs text-slate-500 max-w-md leading-relaxed">Institutional branding is applied to all PDF reports, settlement notifications, and the client-facing vault interface.</p>
-              </div>
+              <p className="text-[11px] text-white/40 max-w-lg leading-relaxed italic font-medium tracking-wide">
+                Institutional branding is autonomously applied to all PDF reports, settlement notifications, and the client-facing vault interface across the CorridorOS network.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Section: API & Integration */}
-      <section className="mb-12">
-        <div className="flex items-baseline justify-between mb-6">
-          <div>
-            <h3 className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-1">Section 02</h3>
-            <h2 className="text-2xl font-black tracking-tight uppercase">API & Integration</h2>
+      <section className="space-y-8">
+        <div className="flex items-end justify-between border-b border-white/5 pb-6">
+          <div className="space-y-1">
+            <span className="text-[9px] font-black uppercase tracking-[0.2em] text-secondary">External Connectivity</span>
+            <h2 className="text-2xl font-black tracking-tighter uppercase text-white">API & Integration Rails</h2>
           </div>
           <div className="flex items-center gap-3">
-            <span className="text-[10px] font-bold uppercase tracking-tighter px-2 py-1 bg-emerald-400 text-black">Active Connection</span>
+             <div className="w-2 h-2 rounded-full bg-secondary solana-glow"></div>
+             <span className="text-[10px] font-black uppercase tracking-widest text-secondary">All Nodes Synchronized</span>
           </div>
         </div>
-        <div className="space-y-1">
+
+        <div className="space-y-4">
           {/* Fireblocks Row */}
-          <div className="bg-white p-6 flex items-center justify-between border border-slate-100 shadow-sm">
-            <div className="flex items-center gap-4">
-              <div className="w-10 h-10 bg-slate-50 flex items-center justify-center">
-                <RefreshCw className="w-5 h-5 text-slate-600" />
+          <div className="glass-card p-8 flex items-center justify-between border-white/5 bg-white/[0.01] hover:bg-white/[0.02] transition-colors group">
+            <div className="flex items-center gap-6">
+              <div className="w-12 h-12 glass-card bg-primary/10 flex items-center justify-center border-primary/20">
+                <Key className="w-5 h-5 text-primary" />
               </div>
               <div>
-                <p className="font-bold uppercase tracking-tight text-sm">Fireblocks API Gateway</p>
-                <p className="text-xs font-mono text-slate-400">ID: fb-prod-8821-x99</p>
+                <p className="font-black uppercase tracking-widest text-sm text-white">Fireblocks API Gateway</p>
+                <p className="text-[10px] font-mono text-white/20 mt-1 uppercase tracking-tighter">ID: fb-prod-8821-x99</p>
               </div>
             </div>
-            <div className="flex items-center gap-8">
+            <div className="flex items-center gap-12">
               <div className="text-right">
-                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">Last Call</p>
-                <p className="text-xs font-mono tabular-nums">2023-10-24 14:02:11</p>
+                <p className="text-[9px] font-black text-white/20 uppercase tracking-[0.2em] mb-1">Heartbeat</p>
+                <p className="text-[11px] font-mono tabular-nums text-white/60">2026-10-24 14:02:11</p>
               </div>
-              <button className="bg-black text-white text-[10px] font-bold uppercase tracking-widest px-4 py-2 hover:opacity-90 transition-opacity">Manage Keys</button>
+              <button className="glass-card bg-white text-black text-[9px] font-black uppercase tracking-[0.2em] px-6 py-3 hover:scale-[1.02] active:scale-[0.98] transition-all">Manage Keys</button>
             </div>
           </div>
           {/* SIX BFI Row */}
-          <div className="bg-white p-6 flex items-center justify-between border border-slate-100 shadow-sm">
-            <div className="flex items-center gap-4">
-              <div className="w-10 h-10 bg-slate-50 flex items-center justify-center">
-                <Landmark className="w-5 h-5 text-slate-600" />
+          <div className="glass-card p-8 flex items-center justify-between border-white/5 bg-white/[0.01] hover:bg-white/[0.02] transition-colors group">
+            <div className="flex items-center gap-6">
+              <div className="w-12 h-12 glass-card bg-secondary/10 flex items-center justify-center border-secondary/20">
+                <Landmark className="w-5 h-5 text-secondary" />
               </div>
               <div>
-                <p className="font-bold uppercase tracking-tight text-sm">SIX BFI Integration</p>
-                <p className="text-xs font-mono text-slate-400">Settlement Protocol v2.4</p>
+                <p className="font-black uppercase tracking-widest text-sm text-white">SIX BFI Protocol</p>
+                <p className="text-[10px] font-mono text-white/20 mt-1 uppercase tracking-tighter">v2.4 Settlement Proxy</p>
               </div>
             </div>
-            <div className="flex items-center gap-8">
+            <div className="flex items-center gap-12">
               <div className="text-right">
-                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">Status</p>
-                <p className="text-xs font-bold text-emerald-600 uppercase">Synchronized</p>
+                <p className="text-[9px] font-black text-white/20 uppercase tracking-[0.2em] mb-1">Operational State</p>
+                <p className="text-[11px] font-black text-secondary uppercase tracking-widest">Linked & Active</p>
               </div>
-              <button className="bg-white border border-slate-200 text-[10px] font-bold uppercase tracking-widest px-4 py-2 hover:bg-slate-50 transition-colors">Configure</button>
+              <button className="glass-card bg-white/[0.03] border-white/10 text-white/40 text-[9px] font-black uppercase tracking-[0.2em] px-6 py-3 hover:text-white transition-all">Configure</button>
             </div>
           </div>
         </div>
-        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="bg-slate-50 p-6 border border-slate-100">
-            <h4 className="text-xs font-bold uppercase tracking-widest mb-4">Webhook Notifications</h4>
-            <div className="space-y-4">
-              <div className="flex items-end gap-2">
-                <div className="flex-1">
-                  <label className="text-[10px] font-bold text-slate-500 uppercase tracking-widest block mb-2">Endpoint URL</label>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="glass-card p-8 border-white/5 bg-white/[0.01]">
+            <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-white/30 mb-8">Webhook Notifications</h4>
+            <div className="space-y-8">
+              <div className="space-y-3">
+                <label className="text-[9px] font-black text-white/20 uppercase tracking-[0.2em] block">Endpoint URL</label>
+                <div className="flex gap-3">
                   <input 
-                    className="w-full bg-white border-0 border-b border-slate-300 p-2 text-sm font-mono focus:ring-0 focus:border-black" 
+                    className="flex-1 glass-card bg-white/[0.03] border-white/10 p-4 text-xs font-mono text-white focus:outline-none focus:border-primary/50" 
                     type="text" 
                     defaultValue="https://api.amina-bank.ch/v1/corridoros/webhook"
                   />
+                  <button className="glass-card bg-primary text-white px-6 font-black uppercase text-[9px] tracking-widest solana-glow">Test</button>
                 </div>
-                <button className="bg-black text-white px-4 py-2 text-[10px] font-bold uppercase tracking-widest h-[37px] hover:opacity-90">Test</button>
               </div>
-              <div className="flex items-center gap-4 pt-2">
-                <label className="flex items-center gap-2 cursor-pointer">
-                  <input defaultChecked className="w-4 h-4 rounded-none border-slate-300 text-black focus:ring-0" type="checkbox"/>
-                  <span className="text-xs font-medium">Settlement Success</span>
+              <div className="flex items-center gap-8">
+                <label className="flex items-center gap-3 cursor-pointer group">
+                  <div className="w-4 h-4 glass-card bg-primary border-none flex items-center justify-center shadow-[0_0_10px_rgba(153,69,255,0.4)]">
+                    <CheckCircle2 className="w-3 h-3 text-white" />
+                  </div>
+                  <span className="text-[10px] font-black uppercase tracking-widest text-white/60 group-hover:text-white transition-colors">Settlement Success</span>
                 </label>
-                <label className="flex items-center gap-2 cursor-pointer">
-                  <input defaultChecked className="w-4 h-4 rounded-none border-slate-300 text-black focus:ring-0" type="checkbox"/>
-                  <span className="text-xs font-medium">Compliance Flags</span>
+                <label className="flex items-center gap-3 cursor-pointer group">
+                  <div className="w-4 h-4 glass-card bg-primary border-none flex items-center justify-center shadow-[0_0_10px_rgba(153,69,255,0.4)]">
+                    <CheckCircle2 className="w-3 h-3 text-white" />
+                  </div>
+                  <span className="text-[10px] font-black uppercase tracking-widest text-white/60 group-hover:text-white transition-colors">Compliance Flags</span>
                 </label>
               </div>
             </div>
           </div>
-          <div className="bg-slate-50 p-6 border border-slate-100">
-            <h4 className="text-xs font-bold uppercase tracking-widest mb-4">Environment Toggle</h4>
-            <div className="flex bg-slate-200 p-1 w-fit">
-              <button className="px-6 py-2 text-[10px] font-bold uppercase tracking-widest bg-white shadow-sm">Mainnet-Beta</button>
-              <button className="px-6 py-2 text-[10px] font-bold uppercase tracking-widest text-slate-500 hover:text-black transition-colors">Testnet Sandbox</button>
+          <div className="glass-card p-8 border-white/5 bg-white/[0.01]">
+            <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-white/30 mb-8">Execution Environment</h4>
+            <div className="flex glass-card bg-white/[0.03] border-white/10 p-1.5 w-fit">
+              <button className="px-8 py-2.5 text-[9px] font-black uppercase tracking-[0.2em] bg-white text-black shadow-xl">Mainnet-Beta</button>
+              <button className="px-8 py-2.5 text-[9px] font-black uppercase tracking-[0.2em] text-white/30 hover:text-white transition-all">Testnet Sandbox</button>
             </div>
-            <p className="text-[10px] text-slate-500 mt-4 leading-relaxed">Switching environments will reload all API credentials. Testnet transactions do not reflect on the Swiss National Bank ledger.</p>
+            <p className="text-[10px] text-white/20 mt-8 leading-relaxed font-medium italic">
+              Switching environments will autonomously revoke and reload all API credentials. Testnet transactions do not settle on the Swiss National Bank (SNB) RITS ledger.
+            </p>
           </div>
         </div>
       </section>
 
       {/* Section: Security & Governance */}
-      <section className="mb-12">
-        <div className="flex items-baseline justify-between mb-6">
-          <div>
-            <h3 className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-1">Section 03</h3>
-            <h2 className="text-2xl font-black tracking-tight uppercase">Security & Governance</h2>
+      <section className="space-y-8">
+        <div className="flex items-end justify-between border-b border-white/5 pb-6">
+          <div className="space-y-1">
+            <span className="text-[9px] font-black uppercase tracking-[0.2em] text-error">Risk Protocol</span>
+            <h2 className="text-2xl font-black tracking-tighter uppercase text-white">Security & Governance</h2>
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-white p-8 border border-slate-100 shadow-sm md:col-span-2">
-            <div className="flex justify-between items-start mb-8">
-              <div>
-                <h4 className="text-xs font-bold uppercase tracking-widest mb-1">Multi-Sig Threshold</h4>
-                <p className="text-xs text-slate-500">Required approvals for high-value treasury movements.</p>
+          <div className="glass-card p-10 border-white/5 bg-white/[0.01] md:col-span-2 relative overflow-hidden group">
+            <div className="absolute top-0 left-0 w-1 h-full bg-error solana-glow"></div>
+            <div className="flex justify-between items-start mb-10 relative">
+              <div className="space-y-2">
+                <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-white/30">Multi-Sig Approval Threshold</h4>
+                <p className="text-[11px] text-white/60 font-medium italic">Required consensus for principal movements & policy shifts.</p>
               </div>
-              <span className="text-xl font-black tabular-nums">3 / 5</span>
+              <span className="text-4xl font-black tabular-nums text-white tracking-tighter">3 / 5</span>
             </div>
-            <div className="space-y-4">
-              <div className="h-2 bg-slate-100 w-full relative">
-                <div className="absolute top-0 left-0 h-full bg-blue-600 w-3/5"></div>
+            <div className="space-y-6 relative">
+              <div className="h-2 bg-white/5 w-full rounded-full overflow-hidden">
+                <motion.div 
+                  initial={{ width: 0 }}
+                  animate={{ width: '60%' }}
+                  className="h-full bg-error shadow-[0_0_15px_#FF4B4B]"
+                ></motion.div>
               </div>
-              <div className="flex justify-between text-[10px] font-bold uppercase tracking-widest text-slate-400">
-                <span>0 Approvals</span>
-                <span className="text-blue-600">Current Threshold</span>
-                <span>Full Board (5)</span>
+              <div className="flex justify-between text-[9px] font-black uppercase tracking-[0.2em] text-white/20">
+                <span>Individual Signing</span>
+                <span className="text-error">Consensus Threshold</span>
+                <span>Unanimous Board</span>
               </div>
             </div>
-            <div className="mt-8 grid grid-cols-2 gap-4">
-              <div className="p-4 bg-slate-50 border-l-4 border-blue-600">
-                <p className="text-[10px] font-bold uppercase tracking-widest text-slate-500">Auto-Approval Limit</p>
-                <p className="text-lg font-bold tabular-nums">CHF 50,000.00</p>
+            <div className="mt-12 grid grid-cols-2 gap-8 relative">
+              <div className="p-6 glass-card bg-white/[0.02] border-white/5 border-l-4 border-error">
+                <p className="text-[9px] font-black uppercase tracking-widest text-white/30 mb-2">Policy Freepass Limit</p>
+                <p className="text-2xl font-black tabular-nums text-white tracking-tighter">CHF 50,000.00</p>
               </div>
-              <div className="p-4 bg-slate-50 border-l-4 border-black">
-                <p className="text-[10px] font-bold uppercase tracking-widest text-slate-500">Session Timeout</p>
-                <p className="text-lg font-bold tabular-nums">15 Minutes</p>
+              <div className="p-6 glass-card bg-white/[0.02] border-white/5 border-l-4 border-white/40">
+                <p className="text-[9px] font-black uppercase tracking-widest text-white/30 mb-2">Admin Session TTL</p>
+                <p className="text-2xl font-black tabular-nums text-white tracking-tighter">15 Minutes</p>
               </div>
             </div>
           </div>
-          <div className="bg-slate-50 p-6 border border-slate-100">
-            <h4 className="text-xs font-bold uppercase tracking-widest mb-4">IP Whitelisting</h4>
-            <div className="space-y-3">
-              <div className="flex items-center justify-between bg-white p-3 text-xs font-mono border border-slate-100">
-                <span>192.168.1.1 (Zurich HQ)</span>
-                <Lock className="w-3 h-3 text-slate-300" />
-              </div>
-              <div className="flex items-center justify-between bg-white p-3 text-xs font-mono border border-slate-100">
-                <span>10.0.42.11 (Operations)</span>
-                <Lock className="w-3 h-3 text-slate-300" />
-              </div>
-              <button className="w-full mt-4 border border-dashed border-slate-400 p-3 text-[10px] font-bold uppercase tracking-widest text-slate-500 hover:bg-white transition-colors flex items-center justify-center gap-2">
-                <Plus className="w-3 h-3" /> Add IP Address
-              </button>
+          <div className="glass-card p-10 border-white/5 bg-white/[0.01] flex flex-col">
+            <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-white/30 mb-8">Access Control (IP)</h4>
+            <div className="space-y-4 flex-1">
+              {[
+                { label: 'Zurich HQ Gateway', ip: '192.168.1.1' },
+                { label: 'Ops Cluster (Internal)', ip: '10.0.42.11' }
+              ].map((item, i) => (
+                <div key={i} className="flex items-center justify-between glass-card bg-white/[0.03] p-5 border-white/5 group hover:border-primary/30 transition-all">
+                  <div>
+                    <p className="text-[9px] font-black uppercase tracking-widest text-white/30 mb-1">{item.label}</p>
+                    <p className="text-xs font-mono text-white/80">{item.ip}</p>
+                  </div>
+                  <Lock className="w-4 h-4 text-white/10 group-hover:text-white transition-colors" />
+                </div>
+              ))}
             </div>
+            <button className="w-full mt-10 border border-dashed border-white/20 p-5 text-[9px] font-black uppercase tracking-[0.2em] text-white/40 hover:bg-white/[0.02] hover:text-white transition-all flex items-center justify-center gap-3 group">
+              <Plus className="w-3.5 h-3.5 group-hover:rotate-90 transition-transform" /> Add IP Signature
+            </button>
           </div>
         </div>
       </section>
 
       {/* Section: Compliance Rules */}
-      <section className="mb-12 pb-12">
-        <div className="flex items-baseline justify-between mb-6">
-          <div>
-            <h3 className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-1">Section 04</h3>
-            <h2 className="text-2xl font-black tracking-tight uppercase">Compliance Rules</h2>
+      <section className="pb-20 space-y-8">
+        <div className="flex items-end justify-between border-b border-white/5 pb-6">
+          <div className="space-y-1">
+            <span className="text-[9px] font-black uppercase tracking-[0.2em] text-primary">Regulatory Logic</span>
+            <h2 className="text-2xl font-black tracking-tighter uppercase text-white">Compliance Rules Engine</h2>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-1">
-          <div className="bg-white p-6 border border-slate-100 shadow-sm">
-            <label className="text-[10px] font-bold text-slate-500 uppercase tracking-widest block mb-2">Travel Rule Threshold</label>
-            <div className="flex items-baseline gap-2">
-              <span className="text-2xl font-black tabular-nums">$3,000</span>
-              <span className="text-[10px] font-bold text-slate-400 uppercase">IVMS101</span>
-            </div>
-            <p className="text-[10px] text-slate-400 mt-2 leading-relaxed">Automatic data collection for transfers exceeding this amount.</p>
-          </div>
-          <div className="bg-white p-6 border border-slate-100 shadow-sm">
-            <label className="text-[10px] font-bold text-slate-500 uppercase tracking-widest block mb-2">KYT Risk Tolerance</label>
-            <div className="flex bg-slate-100 p-1 w-fit mt-1">
-              <button className="px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-slate-400">Low</button>
-              <button className="px-3 py-1 text-[10px] font-bold uppercase tracking-widest bg-white shadow-sm">Medium</button>
-              <button className="px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-slate-400">High</button>
-            </div>
-            <p className="text-[10px] text-slate-400 mt-4 italic">Balanced screening for Tier 1 counterparties.</p>
-          </div>
-          <div className="bg-white p-6 border border-slate-100 shadow-sm">
-            <label className="text-[10px] font-bold text-slate-500 uppercase tracking-widest block mb-2">Auto-SAR Trigger</label>
-            <div className="flex items-center gap-2 mt-1">
-              <div className="w-12 h-6 bg-emerald-400 relative px-1 flex items-center justify-end">
-                <div className="w-4 h-4 bg-black"></div>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+          {[
+            { label: 'Travel Rule Threshold', value: '$3,000', sub: 'IVMS101', desc: 'Auto-collection for all cross-border flows exceeding cap.' },
+            { label: 'KYT Risk Tolerance', value: 'MEDIUM', sub: 'Balanced', desc: 'Dynamic screening intensity for Tier 1 counterparties.' },
+            { label: 'Auto-SAR Reporting', value: 'ENABLED', sub: 'AMLD-6', desc: 'Autonomous report generation for suspicious flags.' },
+            { label: 'Audit Log Retention', value: '10 YRS', sub: 'Ordinance', desc: 'Secure immutable storage aligned with SNB standards.' }
+          ].map((item, i) => (
+            <div key={i} className="glass-card p-8 border-white/5 bg-white/[0.01] hover:bg-white/[0.02] transition-all group">
+              <label className="text-[9px] font-black text-white/20 uppercase tracking-[0.2em] block mb-4 group-hover:text-primary transition-colors">{item.label}</label>
+              <div className="flex items-baseline gap-3 mb-4">
+                <span className="text-3xl font-black tabular-nums text-white tracking-tighter">{item.value}</span>
+                <span className="text-[9px] font-black text-primary uppercase tracking-widest">{item.sub}</span>
               </div>
-              <span className="text-[10px] font-bold uppercase tracking-widest">Enabled</span>
+              <p className="text-[10px] text-white/30 leading-relaxed font-medium italic tracking-wide">{item.desc}</p>
             </div>
-            <p className="text-[10px] text-slate-400 mt-4 uppercase font-bold tracking-tight">Protocol: AMLD-6</p>
-          </div>
-          <div className="bg-white p-6 border border-slate-100 shadow-sm">
-            <label className="text-[10px] font-bold text-slate-500 uppercase tracking-widest block mb-2">Compliance Log Retention</label>
-            <p className="text-2xl font-black tabular-nums">10 YRS</p>
-            <p className="text-[10px] text-slate-400 mt-2 leading-relaxed">Aligned with Swiss Federal Banking Ordinance.</p>
-          </div>
+          ))}
         </div>
-        <div className="mt-1 bg-black text-white p-6 flex justify-between items-center shadow-lg">
-          <div className="flex items-center gap-4">
-            <Shield className="w-6 h-6 text-emerald-400 fill-emerald-400" />
-            <div>
-              <p className="text-sm font-bold uppercase tracking-widest">Global Compliance Override</p>
-              <p className="text-xs opacity-60">All rules are currently subject to FINMA circular 2023/1 regulatory standards.</p>
+        
+        <div className="glass-card bg-secondary/10 border-secondary/20 p-8 flex flex-col md:flex-row justify-between items-center gap-8 shadow-2xl relative overflow-hidden group">
+          <div className="absolute right-0 top-0 -m-12 w-64 h-64 bg-secondary/5 blur-[80px]"></div>
+          <div className="flex items-center gap-8 relative">
+            <div className="p-4 bg-secondary/20 rounded-sm">
+              <Shield className="w-8 h-8 text-secondary solana-glow shadow-[0_0_20px_rgba(20,241,149,0.3)]" />
+            </div>
+            <div className="space-y-2">
+              <p className="text-sm font-black uppercase tracking-[0.2em] text-white">Global Compliance Override</p>
+              <p className="text-xs font-medium text-white/40 italic">
+                All logic circuits are currently subject to FINMA circular 2023/1 regulatory standards. No local overrides permitted.
+              </p>
             </div>
           </div>
-          <button className="bg-emerald-400 text-black text-[10px] font-bold uppercase tracking-widest px-6 py-3 hover:opacity-90 active:scale-[0.98] transition-all">Review All Triggers</button>
+          <button className="glass-card bg-secondary text-black text-[10px] font-black uppercase tracking-[0.3em] px-10 py-4 hover:scale-[1.02] active:scale-[0.98] transition-all solana-glow border-none whitespace-nowrap">
+            Audit Logic Triggers
+          </button>
         </div>
       </section>
     </div>
